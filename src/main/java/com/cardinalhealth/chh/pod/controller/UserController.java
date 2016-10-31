@@ -75,23 +75,5 @@ public class UserController {
 		userService.deleteUser(guid);
 
 	}
-	 @RequestMapping(value = "/hello", method = RequestMethod.GET)
-	    public ModelAndView hello() {
-	        ModelAndView mav = new ModelAndView();
-	        mav.setViewName("hello");
-	        
-	        String str = "Hello World!";
-	        mav.addObject("message", str);
-
-	        return mav;
-	    }	
-	
-
-		@RequestMapping("/")
-		public String welcome(Map<String, Object> model) {
-			model.put("time", new Date());
-			model.put("message", this.message);
-			return "welcome";
-		}
 }
 
